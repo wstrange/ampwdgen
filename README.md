@@ -28,13 +28,13 @@ The POST form parameters are:
 * hash=true/false (optional parameter, false if omitted) if true, hash the password first before encrypting. The 
 amAdmin password must be hashed first.
 
-The returned value is the encrypted string that can be used in a templated AM installation.
+The return value is an encrypted string that can be used to template an AM installation.
 
 
 # Security
 
-The cloud run service does not log any form data. If you have any concerns, you can
-deploy this service to your own environment.
+The cloud run service does not log form POST data. You may wish to deploy this function
+in your own environment.
 
 # Notes
 
