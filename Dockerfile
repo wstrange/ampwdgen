@@ -12,8 +12,6 @@ RUN mkdir /app
 # Kaniko does not like a wild card for the fat jar
 COPY --from=builder /workspace/build/libs/ampwdgen-1.0.0-fat.jar /app/ampwdgen.jar
 
-RUN ls -l /app
-
 EXPOSE 8888
 
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom", "-jar", "/app/ampwdgen.jar"]
